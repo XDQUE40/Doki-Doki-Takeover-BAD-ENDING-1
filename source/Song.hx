@@ -94,7 +94,7 @@ class Song
 
 		var formattedFolder:String = Paths.formatToSongPath(folder);
 		var formattedSong:String = Paths.formatToSongPath(jsonInput);
-		#if MODS_ALLOWED
+		#if windows
 		var moddyFile:String = Paths.modsJson(formattedFolder + '/' + formattedSong);
 		if (FileSystem.exists(moddyFile))
 		{
@@ -104,7 +104,7 @@ class Song
 
 		if (rawJson == null)
 		{
-			#if sys
+			#if windows
 			rawJson = File.getContent(Paths.json(formattedFolder + '/' + formattedSong)).trim();
 			#else
 			rawJson = Assets.getText(Paths.json(formattedFolder + '/' + formattedSong)).trim();
