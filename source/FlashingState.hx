@@ -18,7 +18,11 @@ class FlashingState extends MusicBeatState
 	var selected:Bool = false;
 	override function create()
 	{
-		super.create();
+		#if android
+		addVirtualPad(NONE, A_B);
+		#end	
+		
+			super.create();
 
 		bg = new FlxSprite(0, 0).loadGraphic(Paths.image('DDLCIntroWarning', 'preload'));
 		bg.alpha = 0;
