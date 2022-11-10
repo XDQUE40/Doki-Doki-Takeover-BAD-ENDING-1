@@ -1,8 +1,11 @@
 package;
 
+#if desktop
 import Sys.sleep;
 import lime.app.Application;
 import discord_rpc.DiscordRpc;
+
+
 #if LUA_ALLOWED
 import llua.Lua;
 import llua.State;
@@ -101,3 +104,4 @@ class DiscordClient
 	}
 	#end
 }
+#end
