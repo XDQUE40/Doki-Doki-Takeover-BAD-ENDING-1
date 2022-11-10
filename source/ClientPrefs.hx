@@ -28,9 +28,9 @@ class ClientPrefs
 	public static var scoreZoom:Bool = true;
 	public static var noReset:Bool = false;
 	public static var healthBarAlpha:Float = 1;
-	public static var controllerMode:Bool = false;
+	public static var controllerMode:Bool = true;
 	public static var autoPause:Bool = false;
-	public static var storycomplete:Bool = false;
+	public static var storycomplete:Bool = true;
 	public static var firststart:Bool = true;
 	public static var gameplaySettings:Map<String, Dynamic> = [
 		'scrollspeed' => 1.0,
